@@ -73,9 +73,24 @@ git config --list
 git config --global user.name "myname"
 git config --global user.email "developer@evobatch.com"
 git config --global core.editor "C:/Program Files (x86)/GitExtensions/GitExtensions.exe"
+git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"
 git config --global help.autocorrect 1
 git config --global color.ui auto
 git config --global core.autocrlf true
 true when working on a cross platform project, false when only windows
 git config --unset core.autocrlf will remove this property on local repo
+git config --global push.default simple
 
+add all modified files (including deleted ones)
+git add -u
+git diff cd2f1d..00f8ea
+git diff HEAD~1..HEAD
+git diff HEAD~1..
+
+add all new files and remove deleted ones
+git add -A
+
+revert changes
+git checkout README.md
+git reset --hard
+git reset --soft HEAD~1  (all changes will become staged changes)
