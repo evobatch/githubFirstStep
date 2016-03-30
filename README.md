@@ -94,3 +94,7 @@ revert changes
 git checkout README.md
 git reset --hard
 git reset --soft HEAD~1  (all changes will become staged changes)
+
+// remove untracked files
+git clean -n
+git clean -f
